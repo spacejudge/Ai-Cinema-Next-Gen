@@ -136,11 +136,12 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
               {/* Header */}
               <div className="flex items-start justify-between mb-8 md:mb-12">
                 <div>
-                  <h2 className="font-sans text-[10vw] md:text-[5vw] leading-none font-black uppercase text-background">
-                    {"Let's Talk"}
+                  <h2 className="font-sans text-[8vw] md:text-[4vw] leading-none font-black uppercase text-background">
+                    {"Let's Work on the Next Big Idea"}
                   </h2>
-                  <p className="font-serif text-background/70 mt-3 max-w-md text-sm md:text-base">
-                    Ready to build something that moves culture and drives growth? Tell us about your project.
+                  <p className="font-serif text-background/70 mt-3 max-w-lg text-sm md:text-base">
+                    <strong className="text-background">Big ideas start with a conversation.</strong>{" "}
+                    {"Tell us what you're building \u2014 and let's shape what's next."}
                   </p>
                 </div>
                 <button
