@@ -41,6 +41,7 @@ const services = [
     description:
       "Strategic digital marketing and execution that transforms brands into performant, accessible, and scalable digital products.",
     deliverables: ["Digital Marketing", "Social Media", "Performance Marketing", "Analytics"],
+    href: "/services/digital-marketing",
   },
 ]
 
