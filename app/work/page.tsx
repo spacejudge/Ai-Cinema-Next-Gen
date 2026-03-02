@@ -1,107 +1,177 @@
+"use client"
+
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { ArrowUpRight } from "lucide-react"
-import Link from "next/link"
+import { motion } from "framer-motion"
 
 const projects = [
   {
     id: 1,
-    title: "Kinetic Brand Identity",
-    category: "Branding",
+    index: "01",
+    title: "Cultural Impact Film",
+    category: "Film",
     year: "2024",
-    image: "/bold-geometric-brand-identity-design-orange-black.jpg",
+    description:
+      "High-impact brand storytelling crafted for broadcast, digital, and cultural relevance.",
+    image: "/work/cultural-impact-film.jpg",
   },
   {
     id: 2,
-    title: "Digital Experience Platform",
-    category: "Web Design",
+    index: "02",
+    title: "Launch Campaign System",
+    category: "Campaign",
     year: "2024",
-    image: "/brutalist-website-design-dark-theme.jpg",
+    description:
+      "A multi-platform campaign blending film, social-first content, and performance assets.",
+    image: "/work/launch-campaign-system.jpg",
   },
   {
     id: 3,
-    title: "Motion Graphics System",
+    index: "03",
+    title: "Brand Motion Toolkit",
     category: "Motion",
     year: "2023",
-    image: "/abstract-motion-graphics-orange-shapes.jpg",
+    description:
+      "A scalable motion system built for digital, broadcast, and branded experiences.",
+    image: "/work/brand-motion-toolkit.jpg",
   },
   {
     id: 4,
-    title: "Product Launch Campaign",
-    category: "Campaign",
+    index: "04",
+    title: "Product Reveal Film",
+    category: "Film",
     year: "2023",
-    image: "/product-launch-advertising-bold-typography.jpg",
+    description:
+      "Cinematic product storytelling engineered for attention and conversion.",
+    image: "/work/product-reveal-film.jpg",
   },
   {
     id: 5,
-    title: "Corporate Rebrand",
-    category: "Branding",
+    index: "05",
+    title: "Creative Banner System",
+    category: "Design System",
     year: "2023",
-    image: "/corporate-rebrand-minimalist-logo-design.jpg",
+    description:
+      "High-performance visual assets optimized for omnichannel deployment.",
+    image: "/work/creative-banner-system.jpg",
   },
   {
     id: 6,
-    title: "E-commerce Experience",
-    category: "Web Design",
+    index: "06",
+    title: "Strategic Animatic Series",
+    category: "Concept",
     year: "2022",
-    image: "/ecommerce-website-modern-dark-design.jpg",
+    description:
+      "Pre-visual storytelling that shapes narrative direction before full-scale production.",
+    image: "/work/strategic-animatic-series.jpg",
   },
 ]
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const tileVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+}
 
 export default function WorkPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-16 px-4 md:px-8">
-        <h1 className="font-serif text-[12vw] md:text-[8vw] leading-[0.85] uppercase tracking-tighter">
-          Selected
-          <br />
-          <span className="text-primary">Work</span>
-        </h1>
-        <p className="font-mono text-muted-foreground mt-8 max-w-xl">
-          A curated collection of projects that push boundaries and challenge conventions. Each piece represents our
-          commitment to bold design.
-        </p>
+      {/* Header */}
+      <section className="pt-32 pb-20 px-6 md:px-12 lg:px-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <h1 className="font-sans text-[12vw] md:text-[8vw] leading-[0.85] font-black uppercase tracking-tighter">
+            Selected
+            <br />
+            <span className="text-accent">Work</span>
+          </h1>
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          className="font-serif text-foreground/70 mt-8 max-w-2xl text-base md:text-lg leading-relaxed"
+        >
+          A curated body of work spanning film, motion, design systems, and
+          culture-shaping campaigns. Each project reflects our commitment to
+          bold storytelling and measurable impact.
+        </motion.p>
       </section>
 
-      <section className="px-4 md:px-8 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <Link
-              href={`/work/${project.id}`}
+      {/* Project Grid */}
+      <section className="px-6 md:px-12 lg:px-16 pb-32">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {projects.map((project) => (
+            <motion.div
               key={project.id}
-              className="group relative overflow-hidden border-2 border-foreground"
+              variants={tileVariants}
+              className="group relative flex flex-col bg-foreground overflow-hidden cursor-pointer"
+              style={{ willChange: "transform" }}
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              {/* Thumbnail */}
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500" />
+
+                {/* Category pill */}
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="inline-block px-3 py-1 font-sans text-[10px] uppercase tracking-widest bg-background text-foreground">
+                    {project.category}
+                  </span>
+                </div>
+
+                {/* Hover description */}
+                <div className="absolute inset-0 z-10 flex items-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <p className="font-serif text-sm text-white/90 leading-relaxed max-w-xs">
+                    {project.description}
+                  </p>
+                </div>
               </div>
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-colors duration-300 flex items-end">
-                <div className="p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="font-mono text-xs text-primary uppercase">
+
+              {/* Info bar */}
+              <div className="flex items-center justify-between px-5 py-4 bg-foreground">
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-sans text-sm md:text-base font-black uppercase text-background tracking-tight leading-tight">
+                    {project.title}
+                  </h3>
+                  <span className="font-serif text-xs text-background/50 uppercase tracking-wide">
                     {project.category} — {project.year}
                   </span>
-                  <h3 className="font-serif text-3xl text-white uppercase tracking-tight mt-2">{project.title}</h3>
                 </div>
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                    <ArrowUpRight className="text-black" size={24} />
-                  </div>
-                </div>
+                <span className="font-sans text-2xl md:text-3xl font-black text-background/20 leading-none">
+                  {project.index}
+                </span>
               </div>
-              <div className="p-4 bg-background border-t-2 border-foreground group-hover:bg-foreground group-hover:text-background transition-colors">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm uppercase">{String(index + 1).padStart(2, "0")}</span>
-                  <span className="font-mono text-sm uppercase">{project.title}</span>
-                </div>
-              </div>
-            </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <Footer />
