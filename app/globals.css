@@ -9,6 +9,13 @@
 }
 
 @font-face {
+  font-family: "Mulish Bold";
+  src: url("https://fonts.gstatic.com/s/mulish/v13/1Ptyg83HX_SGhgqO0yLcmjzUAuWexRNRwaClGrw-PTY.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Manrope Medium";
   src: url("/Manrope-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -94,6 +101,7 @@
   --font-sans: "Mulish Black", "Mulish", sans-serif;
   --font-serif: "Manrope Medium", "Manrope", sans-serif;
   --font-mono: "Mulish Black", "Mulish", sans-serif;
+  --font-heading: "Mulish Bold", "Mulish", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
