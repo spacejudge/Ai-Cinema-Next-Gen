@@ -8,21 +8,8 @@ export const metadata: Metadata = {
   description: "Brand experience agency blending creative brilliance with cutting-edge tech. Serving global powerhouses with 360 campaigns and innovative marketing solutions.",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/grittyflint-logo.png",
+    apple: "/grittyflint-logo.png",
   },
 }
 
