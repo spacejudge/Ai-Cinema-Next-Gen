@@ -23,8 +23,7 @@ export function Navbar() {
           alt="Grittyflint"
           width={40}
           height={40}
-          style={{ width: "auto", height: "auto" }}
-          className="h-10"
+          className="h-10 w-auto"
         />
         <span className="font-sans text-xl font-bold uppercase tracking-tight text-foreground hidden sm:inline">
           Grittyflint
