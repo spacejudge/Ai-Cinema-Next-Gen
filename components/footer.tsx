@@ -13,7 +13,7 @@ export function Footer() {
         <div className="flex flex-col items-center text-center">
           <h2 className="font-sans text-[10vw] leading-none font-black uppercase mb-8 text-white">{"Let's Talk"}</h2>
           <button className="px-12 py-4 bg-white text-accent rounded-full font-serif text-xl uppercase hover:scale-105 transition-transform">
-            hello@grittyflint.ai
+            info@grittyflint.com
           </button>
         </div>
 

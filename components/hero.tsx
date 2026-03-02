@@ -29,8 +29,8 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "circOut" }}
           className="max-w-4xl text-center"
         >
-          <h1 className="font-heading text-[5vw] md:text-[4vw] lg:text-[3.5vw] leading-tight font-bold text-white">
-            We create a world where essence scales through visual storytelling...
+          <h1 className="font-sans text-[5vw] md:text-[4vw] lg:text-[3.5vw] leading-tight font-black text-white">
+            We create essence that scales through visual storytelling...
           </h1>
         </motion.div>
       </div>
