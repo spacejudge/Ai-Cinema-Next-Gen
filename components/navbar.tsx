@@ -54,7 +54,7 @@ export function Navbar() {
             onClick={() => setIsContactOpen(true)}
             className="px-6 py-2 rounded-full font-serif text-sm transition-colors uppercase bg-accent text-white hover:scale-105 hover:brightness-110"
           >
-            {"Let's Talk"}
+            {"Let's Work on the Next Big Idea"}
           </button>
         </div>
 
@@ -118,7 +118,7 @@ export function Navbar() {
                 }}
                 className="px-6 py-3 rounded-full font-serif text-sm transition-colors uppercase bg-accent text-white hover:brightness-110 mt-2"
               >
-                {"Let's Talk"}
+                {"Let's Work on the Next Big Idea"}
               </button>
               <div className="flex justify-center gap-3 mt-4">
                 {[

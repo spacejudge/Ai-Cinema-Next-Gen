@@ -21,8 +21,8 @@ export function Footer() {
               onClick={() => setIsContactOpen(true)}
               className="cursor-pointer hover:scale-105 transition-transform"
             >
-              <h2 className="font-sans text-[10vw] leading-none font-black uppercase mb-8 text-white">
-                {"Let's Talk"}
+              <h2 className="font-sans text-[8vw] leading-none font-black uppercase mb-8 text-white text-balance">
+                {"Let's Work on the Next Big Idea"}
               </h2>
             </button>
             <button
