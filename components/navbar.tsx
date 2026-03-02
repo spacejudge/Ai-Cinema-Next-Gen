@@ -38,7 +38,7 @@ export function Navbar() {
             className={`px-6 py-2 rounded-full font-serif text-sm transition-colors uppercase ${
               pathname === item.href
                 ? "bg-accent text-white"
-                : "bg-transparent text-foreground hover:bg-accent hover:text-white"
+                : "bg-transparent text-background hover:bg-accent hover:text-white"
             }`}
           >
             {item.label}
