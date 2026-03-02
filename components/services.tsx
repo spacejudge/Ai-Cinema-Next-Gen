@@ -8,7 +8,7 @@ const services = [
   { title: "Creative Development", tags: ["Concepting", "Art Direction", "Copywriting"], href: "/services/creative-development" },
   { title: "Production Services", tags: ["Video", "Photography", "Motion Graphics"], href: "/services/production-services" },
   { title: "Brand Experience", tags: ["Activations", "Innovation", "Experience Design"], href: "/services/brand-experience" },
-  { title: "Digital & Marketing", tags: ["Digital Strategy", "Marketing", "Analytics"], href: "/services/digital-marketing" },
+  { title: "Digital & Marketing", tags: ["Digital Strategy", "Marketing", "Analytics"] },
 ]
 
 export function Services() {
