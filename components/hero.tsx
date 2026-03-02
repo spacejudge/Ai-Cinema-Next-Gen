@@ -5,27 +5,21 @@ import { motion } from "framer-motion"
 export function Hero() {
   return (
     <section className="relative h-[100svh] bg-black overflow-hidden">
-      {/* YouTube Video Background - Scaled to Cover */}
-      <div className="absolute inset-0 w-full h-full">
-        {/* 
-          YouTube embeds don't support object-fit, so we scale the iframe 
-          larger than its container and center it to simulate cover behavior 
-        */}
-        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-          <iframe
-            className="absolute w-[177.78vh] min-w-full h-[56.25vw] min-h-full"
-            src="https://www.youtube.com/embed/o7HUPX9Mi8k?autoplay=1&mute=1&loop=1&playlist=o7HUPX9Mi8k&controls=0&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&disablekb=1"
-            title="Grittyflint Hero Video"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-            allowFullScreen
-            style={{
-              border: "none",
-              pointerEvents: "none",
-            }}
-          />
-        </div>
+      {/* YouTube Video Background - Centered at Original Size */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <iframe
+          className="w-auto h-auto max-w-full max-h-[100svh] aspect-video"
+          src="https://www.youtube.com/embed/o7HUPX9Mi8k?autoplay=1&mute=1&loop=1&playlist=o7HUPX9Mi8k&controls=0&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&disablekb=1"
+          title="Grittyflint Hero Video"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          allowFullScreen
+          style={{
+            border: "none",
+            pointerEvents: "none",
+          }}
+        />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       </div>
 
       {/* Text Overlay - Centered */}
