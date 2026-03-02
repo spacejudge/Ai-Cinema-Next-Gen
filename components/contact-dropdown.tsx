@@ -132,14 +132,14 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
             aria-modal="true"
             aria-label="Contact form"
           >
-            <div className="container mx-auto px-4 md:px-8 py-8 md:py-12">
+            <div className="container mx-auto px-4 md:px-8 py-6 md:py-12">
               {/* Header */}
-              <div className="flex items-start justify-between mb-8 md:mb-12">
+              <div className="flex items-start justify-between mb-6 md:mb-12">
                 <div>
-                  <h2 className="font-sans text-[8vw] md:text-[4vw] leading-none font-black uppercase text-background text-balance">
+                  <h2 className="font-sans text-[7vw] md:text-[4vw] leading-none font-black uppercase text-background text-balance">
                     {"Let's Work on the Next Big Idea"}
                   </h2>
-                  <p className="font-serif text-background/70 mt-4 max-w-lg text-sm md:text-base leading-relaxed">
+                  <p className="font-serif text-background/70 mt-3 md:mt-4 max-w-lg text-xs md:text-base leading-relaxed">
                     Big ideas start with a conversation.
                     <br />
                     Tell us what you{"'"}re building — and let{"'"}s shape what{"'"}s next.
@@ -159,9 +159,9 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex flex-col items-center justify-center py-16 text-center"
+                  className="flex flex-col items-center justify-center py-10 md:py-16 text-center"
                 >
-                  <CheckCircle size={48} className="text-accent mb-6" />
+                  <CheckCircle size={40} className="text-accent mb-4 md:mb-6" />
                   <h3 className="font-sans text-2xl md:text-3xl font-black uppercase text-background mb-3">
                     Thank You
                   </h3>
@@ -179,9 +179,9 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex flex-col items-center justify-center py-16 text-center"
+                  className="flex flex-col items-center justify-center py-10 md:py-16 text-center"
                 >
-                  <AlertCircle size={48} className="text-accent mb-6" />
+                  <AlertCircle size={40} className="text-accent mb-4 md:mb-6" />
                   <h3 className="font-sans text-2xl md:text-3xl font-black uppercase text-background mb-3">
                     Something Went Wrong
                   </h3>
@@ -196,7 +196,7 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pb-8">
+                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pb-6 md:pb-8">
                   {/* Honeypot - hidden from real users */}
                   <div className="absolute opacity-0 pointer-events-none" aria-hidden="true">
                     <input

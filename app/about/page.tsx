@@ -36,22 +36,22 @@ export default function AboutPage() {
     <main className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-16 px-4 md:px-8">
-        <h1 className="font-serif text-[12vw] md:text-[8vw] leading-[0.85] uppercase tracking-tighter">
+      <section className="pt-24 md:pt-32 pb-8 md:pb-16 px-4 md:px-8">
+        <h1 className="font-serif text-[11vw] md:text-[8vw] leading-[0.85] uppercase tracking-tighter">
           About
           <br />
           <span className="text-primary">Us</span>
         </h1>
       </section>
 
-      <section className="px-4 md:px-8 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <section className="px-4 md:px-8 pb-12 md:pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           <div>
-            <p className="font-sans text-2xl md:text-4xl leading-tight">
+            <p className="font-sans text-xl md:text-4xl leading-tight">
               Grittyflint is a next-gen brand experience agency that blends creative brilliance with cutting-edge tech.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <p className="font-serif text-muted-foreground">
               We develop, design and craft marketing and advertising solutions through visual storytelling and bold brand communication. Helping brands carve out unique spaces in a constantly shifting marketplace. For almost a decade, we&apos;ve been delivering hype-worthy, brand-aligned 360 campaigns, marketing strategy and video productions for global powerhouses like Dabur, Shalina Healthcare, Reckitt Benckiser, Netflix, MTN, Cadbury, and Hollandia.
             </p>
@@ -62,20 +62,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-4 md:px-8 pb-24">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+      <section className="px-4 md:px-8 pb-10 md:pb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
           {stats.map((stat) => (
-            <div key={stat.label} className="border-2 border-foreground p-6 md:p-8">
-              <span className="font-serif text-4xl md:text-6xl text-primary">{stat.value}</span>
-              <p className="font-mono text-xs uppercase mt-2 text-muted-foreground">{stat.label}</p>
+            <div key={stat.label} className="border-2 border-foreground p-4 md:p-8">
+              <span className="font-serif text-3xl md:text-6xl text-primary">{stat.value}</span>
+              <p className="font-mono text-[10px] md:text-xs uppercase mt-1 md:mt-2 text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="px-4 md:px-8 pb-24">
-        <h2 className="font-serif text-4xl md:text-6xl uppercase tracking-tight mb-12">The Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="px-4 md:px-8 pb-10 md:pb-24">
+        <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-tight mb-6 md:mb-12">The Team</h2>
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {team.map((member) => (
             <div key={member.name} className="group">
               <div className="aspect-square overflow-hidden border-2 border-foreground">
@@ -85,19 +85,19 @@ export default function AboutPage() {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <div className="mt-4">
-                <h3 className="font-serif text-xl uppercase">{member.name}</h3>
-                <p className="font-mono text-xs text-primary uppercase">{member.role}</p>
+              <div className="mt-2 md:mt-4">
+                <h3 className="font-serif text-sm md:text-xl uppercase">{member.name}</h3>
+                <p className="font-mono text-[10px] md:text-xs text-primary uppercase">{member.role}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="px-4 md:px-8 pb-24">
-        <div className="bg-foreground text-background p-8 md:p-16">
-          <h2 className="font-serif text-4xl md:text-6xl uppercase tracking-tight">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <section className="px-4 md:px-8 pb-10 md:pb-24">
+        <div className="bg-foreground text-background p-5 md:p-16">
+          <h2 className="font-serif text-2xl md:text-6xl uppercase tracking-tight">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-6 md:mt-12">
             {[
               {
                 title: "Bold",
@@ -113,8 +113,8 @@ export default function AboutPage() {
               },
             ].map((value) => (
               <div key={value.title}>
-                <h3 className="font-serif text-2xl text-primary uppercase">{value.title}</h3>
-                <p className="font-mono text-sm mt-4 opacity-70">{value.description}</p>
+                <h3 className="font-serif text-xl md:text-2xl text-primary uppercase">{value.title}</h3>
+                <p className="font-mono text-xs md:text-sm mt-2 md:mt-4 opacity-70">{value.description}</p>
               </div>
             ))}
           </div>

@@ -22,7 +22,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4 md:px-8 bg-background">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 md:py-4 md:px-8 bg-background">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/grittyflint-logo.png"
@@ -94,15 +94,15 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed top-[72px] left-0 right-0 z-40 bg-foreground border-b border-foreground/20 md:hidden"
+            className="fixed top-[64px] left-0 right-0 z-40 bg-foreground border-b border-foreground/20 md:hidden"
           >
-            <div className="flex flex-col px-4 py-6 gap-2">
+            <div className="flex flex-col px-4 py-4 gap-1.5">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-6 py-3 rounded-full font-serif text-sm transition-colors uppercase text-center ${
+                  className={`px-5 py-2.5 rounded-full font-serif text-sm transition-colors uppercase text-center ${
                     pathname === item.href
                       ? "bg-accent text-white"
                       : "bg-transparent text-background hover:bg-accent hover:text-white"
@@ -116,11 +116,11 @@ export function Navbar() {
                   setIsMobileMenuOpen(false)
                   setIsContactOpen(true)
                 }}
-                className="px-6 py-3 rounded-full font-serif text-sm transition-colors uppercase bg-accent text-white hover:brightness-110 mt-2"
+                className="px-5 py-2.5 rounded-full font-serif text-sm transition-colors uppercase bg-accent text-white hover:brightness-110 mt-1"
               >
                 {"Let's Work on the Next Big Idea"}
               </button>
-              <div className="flex justify-center gap-3 mt-4">
+              <div className="flex justify-center gap-3 mt-3">
                 {[
                   { icon: Twitter, href: "https://x.com/grittyflint" },
                   { icon: Instagram, href: "https://www.instagram.com/grittyflint/" },
