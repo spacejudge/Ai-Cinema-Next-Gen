@@ -6,7 +6,7 @@ import { ServiceCard } from "./service-card"
 const services = [
   { title: "Strategy & Consulting", tags: ["Brand Strategy", "Market Analysis", "Consulting"], href: "/services/strategy-consulting" },
   { title: "Creative Development", tags: ["Concepting", "Art Direction", "Copywriting"], href: "/services/creative-development" },
-  { title: "Production Services", tags: ["Video", "Photography", "Motion Graphics"] },
+  { title: "Production Services", tags: ["Video", "Photography", "Motion Graphics"], href: "/services/production-services" },
   { title: "Brand Experience", tags: ["Activations", "Innovation", "Experience Design"] },
   { title: "Digital & Marketing", tags: ["Digital Strategy", "Marketing", "Analytics"] },
 ]
