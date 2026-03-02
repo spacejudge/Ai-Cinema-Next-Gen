@@ -30,7 +30,7 @@ export function Hero() {
           className="max-w-4xl text-center"
         >
           <h1 className="font-sans text-[5vw] md:text-[4vw] lg:text-[3.5vw] leading-tight font-black text-white">
-            We create essence that scales through visual storytelling...
+            We create essence that scales<br />through visual storytelling...
           </h1>
         </motion.div>
       </div>
