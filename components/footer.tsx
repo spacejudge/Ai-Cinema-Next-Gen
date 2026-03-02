@@ -1,7 +1,5 @@
 "use client"
 
-import Image from "next/image"
-
 export function Footer() {
   const socials = [
     { label: "Instagram", href: "https://www.instagram.com/grittyflint/" },
@@ -20,16 +18,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-end mt-20 border-t-2 border-white pt-8 gap-4">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/grittyflint-logo.png"
-              alt="Grittyflint"
-              width={28}
-              height={28}
-              style={{ width: "28px", height: "auto" }}
-            />
-            <span className="font-serif font-bold uppercase text-sm text-white">© 2026 Grittyflint</span>
-          </div>
+          <div className="font-serif font-bold uppercase text-sm text-white">© 2026 Grittyflint</div>
           <div className="flex gap-8">
             {socials.map((social) => (
               <a
