@@ -38,6 +38,16 @@ export function ServiceCard({ number, title, tags, href }: ServiceCardProps) {
   )
 
   if (href) {
+    const isExternal = href.startsWith("http")
+    if (isExternal) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <div className="group border-t border-background/20 py-12 hover:bg-background/5 transition-colors duration-500 cursor-pointer">
+            {content}
+          </div>
+        </a>
+      )
+    }
     return (
       <Link href={href}>
         <div className="group border-t border-background/20 py-12 hover:bg-background/5 transition-colors duration-500 cursor-pointer">
