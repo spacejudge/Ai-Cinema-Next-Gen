@@ -33,6 +33,7 @@ const services = [
     description:
       "Immersive brand experiences and innovative solutions that bring your brand to life and create unforgettable moments.",
     deliverables: ["Experiential Design", "Brand Activation", "Innovation Strategy", "User Experience"],
+    href: "/services/brand-experience",
   },
   {
     number: "05",
