@@ -136,11 +136,13 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
               {/* Header */}
               <div className="flex items-start justify-between mb-8 md:mb-12">
                 <div>
-                  <h2 className="font-sans text-[10vw] md:text-[5vw] leading-none font-black uppercase text-background">
-                    {"Let's Talk"}
+                  <h2 className="font-sans text-[8vw] md:text-[4vw] leading-none font-black uppercase text-background text-balance">
+                    {"Let's Work on the Next Big Idea"}
                   </h2>
-                  <p className="font-serif text-background/70 mt-3 max-w-md text-sm md:text-base">
-                    Ready to build something that moves culture and drives growth? Tell us about your project.
+                  <p className="font-serif text-background/70 mt-4 max-w-lg text-sm md:text-base leading-relaxed">
+                    Big ideas start with a conversation.
+                    <br />
+                    Tell us what you{"'"}re building — and let{"'"}s shape what{"'"}s next.
                   </p>
                 </div>
                 <button
@@ -163,8 +165,8 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
                   <h3 className="font-sans text-2xl md:text-3xl font-black uppercase text-background mb-3">
                     Thank You
                   </h3>
-                  <p className="font-serif text-background/70 max-w-sm">
-                    Our team will be in touch shortly.
+                  <p className="font-serif text-background/70 max-w-sm leading-relaxed">
+                    Thank you. Our team will be in touch shortly.
                   </p>
                   <button
                     onClick={handleClose}
@@ -183,8 +185,8 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
                   <h3 className="font-sans text-2xl md:text-3xl font-black uppercase text-background mb-3">
                     Something Went Wrong
                   </h3>
-                  <p className="font-serif text-background/70 max-w-sm">
-                    Please try again.
+                  <p className="font-serif text-background/70 max-w-sm leading-relaxed">
+                    Something went wrong. Please try again.
                   </p>
                   <button
                     onClick={resetForm}
@@ -288,7 +290,7 @@ export function ContactDropdown({ isOpen, onClose }: ContactDropdownProps) {
                       ) : (
                         <>
                           <Send size={18} />
-                          Send Message
+                          Send
                         </>
                       )}
                     </button>
