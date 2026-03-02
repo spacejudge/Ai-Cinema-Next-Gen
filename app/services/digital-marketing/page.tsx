@@ -80,12 +80,6 @@ const offerings = [
       "We unify paid, owned, and earned media across platforms — ensuring consistency, efficiency, and impact. From social to web to marketplaces, we create seamless brand experiences across the entire customer journey.",
     tagline: "",
   },
-  {
-    title: "Content & Growth Operations",
-    description:
-      "We build scalable content engines and growth operations that fuel demand generation, brand authority, and audience development. From editorial strategy to production workflows, we create systems that compound over time.",
-    tagline: "Content without infrastructure is noise. We build the machine.",
-  },
 ]
 
 const caseStudies = [
@@ -251,17 +245,12 @@ export default function DigitalMarketingPage() {
                   <h3 className="font-sans text-2xl md:text-4xl font-black uppercase tracking-tight text-background group-hover:text-accent transition-colors">
                     {offering.title}
                   </h3>
-                  <span className="flex items-center gap-2">
-                    <span className="font-serif text-sm uppercase tracking-widest text-accent hidden md:inline">
-                      {expandedOffering === index ? "Close" : "Learn More"}
-                    </span>
-                    <span
-                      className={`font-sans text-3xl text-accent transition-transform duration-300 ${
-                        expandedOffering === index ? "rotate-45" : ""
-                      }`}
-                    >
-                      +
-                    </span>
+                  <span
+                    className={`font-sans text-3xl text-accent transition-transform duration-300 ${
+                      expandedOffering === index ? "rotate-45" : ""
+                    }`}
+                  >
+                    +
                   </span>
                 </button>
 
