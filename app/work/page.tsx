@@ -91,13 +91,13 @@ export default function WorkPage() {
       <Navbar />
 
       {/* Header */}
-      <section className="pt-32 pb-20 px-6 md:px-12 lg:px-16">
+      <section className="pt-24 md:pt-32 pb-10 md:pb-20 px-4 md:px-12 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h1 className="font-sans text-[12vw] md:text-[8vw] leading-[0.85] font-black uppercase tracking-tighter">
+          <h1 className="font-sans text-[11vw] md:text-[8vw] leading-[0.85] font-black uppercase tracking-tighter">
             Selected
             <br />
             <span className="text-accent">Work</span>
@@ -107,7 +107,7 @@ export default function WorkPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="font-serif text-foreground/70 mt-8 max-w-2xl text-base md:text-lg leading-relaxed"
+          className="font-serif text-foreground/70 mt-4 md:mt-8 max-w-2xl text-sm md:text-lg leading-relaxed"
         >
           A curated body of work spanning film, motion, design systems, and
           culture-shaping campaigns. Each project reflects our commitment to
@@ -116,9 +116,9 @@ export default function WorkPage() {
       </section>
 
       {/* Project Grid */}
-      <section className="px-6 md:px-12 lg:px-16 pb-32">
+      <section className="px-4 md:px-12 lg:px-16 pb-16 md:pb-32">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -141,8 +141,8 @@ export default function WorkPage() {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500" />
 
                 {/* Category pill */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-block px-3 py-1 font-sans text-[10px] uppercase tracking-widest bg-background text-foreground">
+                <div className="absolute top-3 left-3 md:top-4 md:left-4 z-10">
+                  <span className="inline-block px-2.5 py-0.5 md:px-3 md:py-1 font-sans text-[9px] md:text-[10px] uppercase tracking-widest bg-background text-foreground">
                     {project.category}
                   </span>
                 </div>
@@ -156,16 +156,16 @@ export default function WorkPage() {
               </div>
 
               {/* Info bar */}
-              <div className="flex items-center justify-between px-5 py-4 bg-foreground">
-                <div className="flex flex-col gap-1">
-                  <h3 className="font-sans text-sm md:text-base font-black uppercase text-background tracking-tight leading-tight">
+              <div className="flex items-center justify-between px-3 py-3 md:px-5 md:py-4 bg-foreground">
+                <div className="flex flex-col gap-0.5">
+                  <h3 className="font-sans text-xs md:text-base font-black uppercase text-background tracking-tight leading-tight">
                     {project.title}
                   </h3>
                   <span className="font-serif text-xs text-background/50 uppercase tracking-wide">
                     {project.category} — {project.year}
                   </span>
                 </div>
-                <span className="font-sans text-2xl md:text-3xl font-black text-background/20 leading-none">
+                <span className="font-sans text-xl md:text-3xl font-black text-background/20 leading-none">
                   {project.index}
                 </span>
               </div>

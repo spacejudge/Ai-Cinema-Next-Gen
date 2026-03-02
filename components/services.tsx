@@ -13,9 +13,9 @@ const services = [
 
 export function Services() {
   return (
-    <section className="bg-foreground min-h-screen py-32 relative">
-      <div className="container mx-auto px-4 mb-20 flex items-end justify-between">
-        <h2 className="font-sans text-[12vw] leading-none text-background uppercase font-black">Services</h2>
+    <section className="bg-foreground min-h-screen py-16 md:py-32 relative">
+      <div className="container mx-auto px-4 mb-10 md:mb-20 flex items-end justify-between">
+        <h2 className="font-sans text-[14vw] md:text-[12vw] leading-none text-background uppercase font-black">Services</h2>
         <Star className="w-24 h-24 text-accent animate-pulse hidden md:block" fill="currentColor" />
       </div>
 

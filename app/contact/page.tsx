@@ -26,21 +26,21 @@ export default function ContactPage() {
     <main className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-16 px-4 md:px-8">
-        <h1 className="font-serif text-[12vw] md:text-[8vw] leading-[0.85] uppercase tracking-tighter">
+      <section className="pt-24 md:pt-32 pb-8 md:pb-16 px-4 md:px-8">
+        <h1 className="font-serif text-[11vw] md:text-[8vw] leading-[0.85] uppercase tracking-tighter">
           Let&apos;s
           <br />
           <span className="text-primary">Talk</span>
         </h1>
-        <p className="font-mono text-muted-foreground mt-8 max-w-xl">
+        <p className="font-mono text-muted-foreground mt-4 md:mt-8 max-w-xl text-sm">
           Have a project in mind? We&apos;d love to hear about it. Fill out the form below and we&apos;ll get back to
           you within 24 hours.
         </p>
       </section>
 
-      <section className="px-4 md:px-8 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <form onSubmit={handleSubmit} className="space-y-8">
+      <section className="px-4 md:px-8 pb-12 md:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16">
+          <form onSubmit={handleSubmit} className="space-y-5 md:space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="font-mono text-xs uppercase mb-2 block">Name *</label>
@@ -114,9 +114,9 @@ export default function ContactPage() {
             </button>
           </form>
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             <div>
-              <h3 className="font-serif text-2xl uppercase mb-6">Contact Info</h3>
+              <h3 className="font-serif text-xl md:text-2xl uppercase mb-4 md:mb-6">Contact Info</h3>
               <div className="space-y-4">
                 <a
                   href="mailto:hello@superdesign.co"
@@ -140,7 +140,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl uppercase mb-6">Office</h3>
+              <h3 className="font-serif text-xl md:text-2xl uppercase mb-4 md:mb-6">Office</h3>
               <p className="font-mono text-muted-foreground">
                 123 Design Street
                 <br />
@@ -150,8 +150,8 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="border-2 border-foreground p-8 bg-foreground text-background">
-              <h3 className="font-serif text-2xl uppercase mb-4">Quick Response</h3>
+            <div className="border-2 border-foreground p-5 md:p-8 bg-foreground text-background">
+              <h3 className="font-serif text-xl md:text-2xl uppercase mb-3 md:mb-4">Quick Response</h3>
               <p className="font-mono text-sm opacity-70">
                 We typically respond within 24 hours. For urgent inquiries, feel free to call us directly.
               </p>
