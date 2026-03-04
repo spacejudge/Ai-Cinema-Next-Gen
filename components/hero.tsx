@@ -4,11 +4,11 @@ import { motion } from "framer-motion"
 
 export function Hero() {
   return (
-    <section className="relative h-[100svh] bg-black overflow-hidden">
-      {/* YouTube Video Background - Centered at Original Size */}
+    <section className="relative h-[100dvh] md:h-screen bg-black overflow-hidden">
+      {/* YouTube Video Background - Centered at True Aspect Ratio */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <iframe
-          className="w-auto h-auto max-w-full max-h-[100svh] aspect-video"
+          className="w-auto h-auto max-w-full max-h-[100dvh] md:max-h-screen aspect-video"
           src="https://www.youtube.com/embed/o7HUPX9Mi8k?autoplay=1&mute=1&loop=1&playlist=o7HUPX9Mi8k&controls=0&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&disablekb=1"
           title="Grittyflint Hero Video"
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
@@ -23,7 +23,7 @@ export function Hero() {
       </div>
 
       {/* Text Overlay - Centered */}
-      <div className="relative z-10 flex items-center justify-center h-full px-4">
+      <div className="relative z-10 flex items-center justify-center h-full px-4 md:px-8">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
