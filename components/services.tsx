@@ -13,10 +13,10 @@ const services = [
 
 export function Services() {
   return (
-    <section className="bg-foreground min-h-screen py-16 md:py-32 relative">
-      <div className="container mx-auto px-4 mb-10 md:mb-20 flex items-end justify-between">
-        <h2 className="font-sans text-[14vw] md:text-[12vw] leading-none text-background uppercase font-black">Services</h2>
-        <Star className="w-24 h-24 text-accent animate-pulse hidden md:block" fill="currentColor" />
+    <section className="bg-foreground min-h-screen py-12 md:py-20 lg:py-24 relative">
+      <div className="container mx-auto px-4 mb-8 md:mb-12 lg:mb-16 flex items-end justify-between max-w-6xl">
+        <h2 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-7xl leading-[0.95] text-background uppercase font-black">Services</h2>
+        <Star className="w-16 h-16 lg:w-20 lg:h-20 text-accent animate-pulse hidden md:block" fill="currentColor" />
       </div>
 
       <div className="flex flex-col">
