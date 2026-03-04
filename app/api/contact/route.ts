@@ -48,7 +48,7 @@ export async function POST(request: Request) {
     // Log for server-side visibility
     console.log("Contact form submission:", JSON.stringify(submission, null, 2))
 
-    // If RESEND_API_KEY is available, send via Resend
+    // Priority 1: Use Resend if API key is available
     if (process.env.RESEND_API_KEY) {
       const resendResponse = await fetch("https://api.resend.com/emails", {
         method: "POST",
@@ -83,8 +83,42 @@ export async function POST(request: Request) {
           { status: 500 }
         )
       }
+
+      return NextResponse.json({ success: true })
     }
 
+    // Priority 2: Use Formspree if endpoint is configured
+    if (process.env.FORMSPREE_ENDPOINT) {
+      const formspreeResponse = await fetch(process.env.FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: sanitizedName,
+          email: sanitizedEmail,
+          message: sanitizedMessage,
+          _subject: `New Contact: ${sanitizedName}`,
+        }),
+      })
+
+      if (!formspreeResponse.ok) {
+        console.error("Formspree error:", await formspreeResponse.text())
+        return NextResponse.json(
+          { error: "Failed to send message" },
+          { status: 500 }
+        )
+      }
+
+      return NextResponse.json({ success: true })
+    }
+
+    // No email service configured - log warning but return success
+    // This allows testing without email configuration
+    console.warn(
+      "No email service configured. Set RESEND_API_KEY or FORMSPREE_ENDPOINT environment variable."
+    )
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error("Contact form error:", error)
