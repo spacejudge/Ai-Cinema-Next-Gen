@@ -22,15 +22,15 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       </div>
 
-      {/* Text Overlay - Centered */}
-      <div className="relative z-10 flex items-center justify-center h-full px-4 md:px-8">
+      {/* Text Overlay - Left Aligned */}
+      <div className="relative z-10 flex flex-col justify-center items-start h-full w-full max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "circOut" }}
-          className="max-w-4xl text-center"
+          className="max-w-2xl text-left"
         >
-          <h1 className="font-sans text-[6.5vw] sm:text-[5vw] md:text-[4vw] lg:text-[3.5vw] leading-[1.1] font-black text-white text-balance">
+          <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] font-black text-white text-balance">
             We create essence that scales through visual storytelling
           </h1>
         </motion.div>
