@@ -2,7 +2,7 @@ import { createClient } from './server'
 import type { Post, PostListItem } from '../blog'
 
 export async function getPosts(limit?: number): Promise<PostListItem[]> {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   let query = supabase
     .from('posts')
@@ -34,7 +34,7 @@ export async function getPosts(limit?: number): Promise<PostListItem[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   const { data, error } = await supabase
     .from('posts')
@@ -55,7 +55,7 @@ export async function getPostsByCategory(
   category: string,
   limit?: number
 ): Promise<PostListItem[]> {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   let query = supabase
     .from('posts')
